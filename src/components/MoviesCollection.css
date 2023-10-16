@@ -1,0 +1,13 @@
+.movies-collection-container {
+    width: 100%;
+    margin: 32px auto;
+    padding: 0 6%;
+}
+
+.movies-collection-container .movies {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 16px;
+    justify-content: space-between;
+}

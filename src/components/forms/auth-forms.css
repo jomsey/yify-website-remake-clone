@@ -1,0 +1,126 @@
+.forms {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10000;
+    background-color: rgba(39, 38, 38, 0.805);
+    padding-top: 72px;
+    overflow: hidden;
+    visibility: hidden;
+    backdrop-filter: blur(3px);
+}
+
+.forms-container {
+    width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.forms-header {
+    display: flex;
+    height: 60px;
+    background-color: var(--light);
+}
+
+.forms-header .head-toggler {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d6d5d5;
+    color: gray;
+}
+
+.forms-header .active-head {
+    background-color: var(--light) !important;
+    color: var(--primary);
+    font-weight: 700 !important;
+}
+
+.forms-display form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--light);
+    padding: 48px 32px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.forms-display form .input-group {
+    border: .1rem solid #d6d5d5;
+    position: relative;
+}
+
+.forms-display form .input-group .form-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+    font-size: 1.5rem;
+    color: var(--tertiary);
+}
+
+.forms-display form .input-group input {
+    border: none;
+    width: 100%;
+    padding: 16px 36px;
+}
+
+.forms-display form button {
+    padding: 16px 24px;
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    border-radius: 5px;
+}
+
+.forms-display form input:focus {
+    outline: none;
+}
+
+.forms small:not(.login+small) {
+    text-align: center !important;
+    color: #b4b1b1;
+    font-style: italic;
+}
+
+.forms .login+small {
+    color: var(--light);
+    text-align: center !important;
+    margin-top: 24px;
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.forms-modal-visible {
+    visibility: visible;
+}
+
+.reset-password p {
+    font-size: 15px;
+    text-align: center;
+    line-height: 24px;
+    color: #8a8888;
+}
+
+.forms-modal-visible .close-btn {
+    color: var(--primary);
+    font-size: 1.8rem;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.forms-modal-visible .close-btn:hover {
+    opacity: .8;
+}

@@ -1,0 +1,54 @@
+.footer {
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    border-top: 1px solid var(--gray-shade);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+}
+
+.footer div,
+.footer ul {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer a {
+    transition: all .4s ease;
+}
+
+.footer a:hover {
+    color: var(--light);
+}
+
+.footer ul li a {
+    font-size: .8rem;
+    color: var(--tertiary);
+    font-weight: 700;
+}
+
+.footer .copyright,
+.footer small {
+    color: var(--light);
+}
+
+.footer ul li a:before {
+    content: "-";
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.footer small {
+    font-weight: 700;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.footer small a {
+    color: var(--tertiary);
+}

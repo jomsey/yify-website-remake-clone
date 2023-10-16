@@ -1,0 +1,20 @@
+.trending-movies-container {
+    width: 90%;
+    margin: auto;
+}
+
+.trending-movies-container h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 16px;
+}
+
+.trending-movies-container .movie-container {
+    width: 180px;
+    min-width: 180px;
+}
+
+.trending-movies-container .movie-container .movie-card {
+    height: 250px;
+}

@@ -1,0 +1,16 @@
+.popular-movies-container {
+    width: 85%;
+    margin: 32px auto;
+    margin-top: 24px;
+    z-index: 7 !important;
+    position: relative;
+}
+
+.popular-movies-container .cluster-top {
+    border-bottom: 1px solid var(--gray-shade);
+    padding-bottom: 16px;
+}
+
+.popular-movies-container .movies {
+    justify-content: space-between;
+}

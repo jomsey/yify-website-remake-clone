@@ -1,0 +1,66 @@
+:root {
+    --primary: #6ac045;
+    --secondary: rgb(29, 29, 29);
+    --tertiary: rgb(172, 169, 169);
+    --light: #fff;
+    --gray-shade: #333;
+    --link-color: rgb(20, 125, 245);
+    --dark: rgb(3, 3, 3);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.active {
+    color: var(--primary) !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: Arimo, Arial, Helvetica, "Lucida Grande", sans-serif;
+    background-color: var(--secondary);
+}
+
+.shortcut-link,
+.blue {
+    color: var(--link-color) !important;
+}
+
+.cluster-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cluster-heading {
+    color: var(--light);
+    font-size: 1rem;
+}
+
+.cluster-top span {
+    color: var(--tertiary);
+    font-size: .87rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.movies {
+    margin: 20px;
+    display: flex;
+    gap: 16px 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,24 @@
+.person-card .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--light);
+    border-radius: 50%;
+}
+
+.person-card {
+    display: flex;
+    gap: 24px;
+    border-bottom: .1rem solid var(--gray-shade);
+    width: 100%;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.person-card span {
+    font-style: normal !important;
+    font-size: 14px !important;
+}
+
+.person-card .alias {
+    color: var(--light);
+}

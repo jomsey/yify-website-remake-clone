@@ -1,0 +1,98 @@
+.landing {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    color: aliceblue;
+    background-image: url("./ff.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 32px;
+    background-position: top;
+}
+
+.hero {
+    position: relative;
+    padding: 60px 0 60px 0;
+    z-index: 7;
+}
+
+.landing::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.hero text {
+    z-index: 8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.landing h1 {
+    font-size: 2.8rem;
+    color: var(--light);
+    text-align: center;
+    font-weight: 600;
+}
+
+.landing p {
+    color: var(--tertiary);
+    text-align: center;
+    width: 50%;
+    margin: 24px auto;
+    font-size: .9rem;
+    line-height: 24px;
+}
+
+.landing .warning {
+    background-color: var(--dark);
+    width: 85%;
+    margin: auto;
+    padding: 24px;
+    border: 5px solid var(--primary);
+    z-index: 7;
+    position: relative;
+}
+
+.landing .warning p {
+    width: 100%;
+    color: var(--light);
+}
+
+.landing .warning h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid var(--gray-shade);
+    padding-bottom: 8px;
+}
+
+.landing .warning button {
+    margin: auto;
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--light);
+    font-weight: 600;
+    padding: 6px;
+    border-radius: 8px;
+    text-shadow: 3px 3px 3px var(--secondary);
+    border: none;
+}
+
+.landing .warning .download-pic {
+    width: 20px;
+}

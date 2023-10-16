@@ -1,0 +1,69 @@
+.movie-filters {
+    height: 250px;
+    background-color: rgb(18, 17, 17);
+}
+
+.movie-filters form {
+    width: 75%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+}
+
+.movie-filters form button {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 10px 36px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    top: 70px;
+    font-size: .98rem;
+    font-weight: 700;
+}
+
+.movie-filters .form-group {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-filters form .input-group {
+    width: 100%;
+    position: relative;
+}
+
+.movie-filters form .selectors {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.movie-filters form .input-group input {
+    width: 100%;
+    background-color: var(--gray-shade);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--tertiary);
+    font-size: .95rem;
+}
+
+.movie-filters form .input-group input:focus {
+    outline: none;
+}
+
+.movie-filters form .input-group:first-child label {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gray-shade);
+    position: relative;
+    bottom: 16px;
+}

@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    height: 38px;
+    gap: 8px;
+}
+
+.pagination span {
+    border: 1px solid var(--gray-shade);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light) !important;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s linear;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.pagination .page {
+    width: 35px;
+}
+
+.pagination .control {
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.pagination .control::selection {
+    background-color: transparent;
+}
+
+.pagination span:hover {
+    background-color: var(--primary);
+}
+
+.pagination .active {
+    background-color: var(--primary);
+}
