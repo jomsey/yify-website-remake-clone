@@ -1,16 +1,18 @@
 import React from 'react'
 import "./SearchFilters.css"
 import Selector from './Selector'
+import { FiltersContext } from '../context'
 
 export default function SearchFilters() {
         
+  const sortRef = React.useRef(null)
    const queryRef = React.useRef(null)
    const qualityRef=React.useRef(null)
    const genreRef = React.useRef(null)
    const ratingRef = React.useRef(null)
    const yearRef = React.useRef(null)
    const languageRef = React.useRef(null)
-   const sortRef = React.useRef(null)
+   const {setFilters} = React.useContext(FiltersContext)
 
    const filters =[
         {
@@ -52,9 +54,16 @@ export default function SearchFilters() {
         }
 ]
 
-   const [formData,setFormData] = React.useState([])
    const handleSubmit = (e)=>{
      e.preventDefault()
+     setFilters({
+      quality:qualityRef.current.value,
+      genre:genreRef.current.value,
+      language:languageRef.current.value,
+      order:sortRef.current.value,
+      year:yearRef.current.value,
+      rate:ratingRef.current.value
+     })
      
       
    }

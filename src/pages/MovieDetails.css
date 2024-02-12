@@ -6,7 +6,6 @@
     }
     
     .hero-section-container {
-        background-image: url(ff.webp);
         /* background-attachment: fixed; */
         position: relative;
         background-position: top;
@@ -55,13 +54,15 @@
     
     .movie-details-container .hero-section .similar-movies {
         width: 200px;
+        grid-template-columns: 1fr 1fr;
     }
     
     .movie-details-container .hero-section .similar-movies .movies-sample {
         margin-top: 12px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
     }
     
     .movie-details-container .hero-section .movie-card:not(.similar-movies .movie-card) {
@@ -71,8 +72,8 @@
     
     .movie-details-container .hero-section .similar-movies .movie-card {
         height: 140px;
-        margin: 0;
-        /* width: 100px; */
+        margin: 0 !important;
+        width: 90px !important;
         border-width: 4px;
     }
     
@@ -245,14 +246,20 @@
         font-size: 12px;
     }
     
+    .review .star {
+        margin-left: 12px;
+        position: relative;
+        top: 1px;
+        color: var(--primary) !important;
+    }
+    
     .review .movie-rating {
         color: var(--light) !important;
-        margin-left: 12px;
+        margin-left: 8px;
     }
     
     .review .name {
         font-weight: 900 !important;
-        color: var(--primary) !important;
     }
     
     .feedback a {

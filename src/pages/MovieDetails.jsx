@@ -4,10 +4,11 @@ import Movie from '../components/Movie'
 import Person from './person-card/Card';
 import Review from './../components/review';
 
+
 function MovieDetails({movie}) {
   return (
    <main className='movie-details-container'>
-      <section className="hero-section-container">
+      <section className="hero-section-container" style={{backgroundImage:"url(/ff.webp)"}}>
         <div className="hero-section">
         <div>
             <Movie/>

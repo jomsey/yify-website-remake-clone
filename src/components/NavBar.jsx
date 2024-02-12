@@ -3,6 +3,7 @@ import "./NavBar.css";
 import logo from "/logo-YTS.svg";
 import { YifyAppContext } from '../context';
 import NavLink from './NavLink';
+import {FaSearch} from "react-icons/fa"
 
 
 function NavBar() {
@@ -16,7 +17,10 @@ function NavBar() {
         </div>
             <div className="top-nav-group">
                 <form action="" method="get">
+                    <div className="search-input-group">
+                     <FaSearch className='search-icon'/>
                     <input name="q" placeholder='Quick search'/>
+                    </div>
                 </form>
                 <div className="top-nav-links">
                     <ul>
@@ -30,13 +34,13 @@ function NavBar() {
                     <ul>
                         <li onClick={ () =>{
                                        setFormsModalVisible(true);
-           setActiveForm('login');
-    }}>Login</li>
+                                       setActiveForm('login');
+                         }}>Login</li>
                         <span className="divider"></span>
                         <li onClick={ () =>{
-           setFormsModalVisible(true);
-           setActiveForm('register');
-    }}>Register</li>
+                                        setFormsModalVisible(true);
+                                        setActiveForm('register');
+                        }}>Register</li>
                     </ul>
                 </div>
             </div>

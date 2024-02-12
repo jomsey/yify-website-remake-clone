@@ -6,7 +6,7 @@ export default function Movie({title="Unwelcome",rating,poster,genre,year}) {
   return (
     <div className="movie-container">
         <div className="movie-card">
-            <img src={poster || "./mv-sample.jpg"} alt="" />
+            <img src={poster || "/mv-sample.jpg"} alt="" />
             <div className="movie-card-overlay">
             </div>
             <div className="content">

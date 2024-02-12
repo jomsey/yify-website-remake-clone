@@ -1,5 +1,5 @@
 .popular-movies-container {
-    width: 85%;
+    width: 95%;
     margin: 32px auto;
     margin-top: 24px;
     z-index: 7 !important;
@@ -13,4 +13,8 @@
 
 .popular-movies-container .movies {
     justify-content: space-between;
+}
+
+.popular-movies-container span {
+    color: var(--link-color) !important;
 }

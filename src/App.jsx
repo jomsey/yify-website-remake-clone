@@ -13,7 +13,7 @@ import { BrowserRouter,Routes ,Route} from 'react-router-dom';
 
 function App() {
   const [formsModalVisible,setFormsModalVisible] =useState(false);
-  const [activeForm,setActiveForm] = useState("logi")
+  const [activeForm,setActiveForm] = useState("login")
 
   return (
    <BrowserRouter >
