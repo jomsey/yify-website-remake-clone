@@ -14,7 +14,8 @@ export default function BrowseMovies() {
   const [filters,setFilters] = React.useState({})
   const {year,genre,language,rate,quality} =filters
   const moviesListAPIEndPoint = `https://yts.mx/api/v2/list_movies.json?page=${moviePage}`
-  console.log(filters);
+  
+  
   const   getMovies =async ()=>{
       try {
           const response = await axios.get(moviesListAPIEndPoint)
@@ -52,6 +53,7 @@ export default function BrowseMovies() {
               <div className="movies">
                     {moviesList.map(m=><Movie 
                       key={m.id} 
+                      id={m.id}
                       title={m.title}
                       poster={m.medium_cover_image}
                       rating={m.rating}

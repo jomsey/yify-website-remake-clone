@@ -3,15 +3,77 @@ import "./MovieDetails.css"
 import Movie from '../components/Movie'
 import Person from './person-card/Card';
 import Review from './../components/review';
+import axios  from "axios"
+import { useParams } from 'react-router-dom';
 
 
-function MovieDetails({movie}) {
+function MovieDetails() {
+    const params = useParams()
+    const movieId = parseInt(params.movie_id)
+    const [movie,setMovie] = React.useState({})
+    const [suggestedMovies,setSuggestedMovies] = React.useState([])
+    const [movieComments,setMovieComments] = React.useState([])
+    const [movieReviews,setMovieReviews] = React.useState([])
+
+
+    
+
+
+    const getMovie = async ()=>{
+        try {
+            const response = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${movieId}&with_images=true&with_cast=true`)
+            setMovie(response.data.data.movie)
+        } catch (error) {
+            
+        }
+
+    }
+    const getMovieSuggestions = async ()=>{
+        try {
+            const response = await axios.get(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${movieId}`)
+            setSuggestedMovies(response.data.data.movies)
+        } catch (error) {
+            
+        }
+
+    }
+ 
+    const getMovieComments = async ()=>{
+        try {
+            const response = await axios.get(`https://yts.mx/api/v2/movie_comments.json?movie_id=${movieId}`)
+            //setMovieComments(response.data.data.movies)
+            console.log(response);
+        } catch (error) {
+            
+        }
+
+    }
+
+    const getMovieReviews = async ()=>{
+        try {
+            const response = await axios.get(`https://yts.mx/api/v2/movie_reviews.json?movie_id=${movieId}`)
+            //setMovieComments(response.data.data.movies)
+            console.log(response);
+        } catch (error) {
+            
+        }
+
+    }
+    
+    React.useEffect(()=>{
+        getMovie()
+        getMovieSuggestions()
+        getMovieComments()
+        getMovieReviews()
+    },[])
+    console.log(suggestedMovies);
   return (
    <main className='movie-details-container'>
-      <section className="hero-section-container" style={{backgroundImage:"url(/ff.webp)"}}>
+      <section className="hero-section-container" style={{backgroundImage:`url(${movie.background_image})`}}>
         <div className="hero-section">
         <div>
-            <Movie/>
+            <Movie poster={movie.large_cover_image
+}/>
             <div className="action-buttons">
                 <button>Download</button>
                 <button>watch Now</button>
@@ -19,7 +81,7 @@ function MovieDetails({movie}) {
         </div>
 
         <div>
-            <h1>Hancock</h1>  
+            <h1>{movie.title}</h1>  
             <div className="summery">
                 <span className='year'>2020</span>
                 <span className="language">French</span>
@@ -47,10 +109,14 @@ function MovieDetails({movie}) {
         <aside className='similar-movies'>
             <h2>Similar Movies</h2>
             <div className="movies-sample">
-                <Movie/>           
-                <Movie/>
-                {/* <Movie/>
-                <Movie/> */}
+                {
+                    suggestedMovies.map(m=><Movie 
+                        id = {m.id}
+                        poster={m.medium_cover_image
+
+                    }/>)
+                }
+            
             </div>
         </aside>
         </div>
@@ -62,7 +128,7 @@ function MovieDetails({movie}) {
           <div className="summery">
               <h3>Plot Summery</h3>
               <div className='description'>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil saepe facilis rem nemo eveniet voluptate iusto sit, nam maxime iste harum, repudiandae est cum placeat repellendus praesentium eligendi quae quibusdam, ipsa autem. Omnis dolorem officia ullam at sit minus rem asperiores dicta. Maxime nihil rem illo iusto provident fugiat! In recusandae sed non explicabo, molestiae itaque accusamus reprehenderit id deserunt soluta suscipit dignissimos vitae laboriosam quibusdam sapiente tempore commodi maiores? Enim temporibus facere dolorum? Eligendi iusto dignissimos ullam exercitationem ipsum corrupti non aliquid culpa reprehenderit dolores deserunt incidunt fugiat aspernatur sunt rem, illum blanditiis ea aperiam eius quis. Aspernatur, quos!</p>
+                <p>{movie.description_intro}</p>
               </div>
               
               <span className="uploader">Uploaded by : OTTO</span><br />

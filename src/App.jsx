@@ -25,7 +25,7 @@ function App() {
 
               <Routes >
                     <Route path='/'  element={<Home/>}  />
-                    <Route path='/movies/:title' element={<MovieDetails/>} />
+                    <Route path='/movies/:movie_id' element={<MovieDetails/>} />
                     <Route path='/trending'  element={<TrendingMovies/>}/>
                     <Route path='/browse' element={<BrowseMovies/>}/>
                     {/* <Route path='*' element={<h1>Looks You Are Lost</h1>}/> */}

@@ -62,7 +62,8 @@ export default function SearchFilters() {
       language:languageRef.current.value,
       order:sortRef.current.value,
       year:yearRef.current.value,
-      rate:ratingRef.current.value
+      rate:ratingRef.current.value,
+      query:queryRef.current.value
      })
      
       
