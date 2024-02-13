@@ -67,3 +67,29 @@
     position: relative;
     bottom: 16px;
 }
+
+@media screen and (max-width:428px) {
+    .movie-filters {
+        height: auto;
+    }
+    .movie-filters form {
+        width: 100%;
+        padding: 20px;
+        display: block;
+    }
+    .movie-filters .form-group {
+        width: 100%;
+    }
+    .movie-filters form .selectors {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        flex-direction: column;
+    }
+    .movie-filters form button {
+        position: relative;
+        top: 0;
+        margin-top: 24px;
+        width: 100%;
+    }
+}

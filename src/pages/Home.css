@@ -96,3 +96,16 @@
 .landing .warning .download-pic {
     width: 20px;
 }
+
+@media screen and (max-width:640px) {
+    .landing h1 {
+        font-size: 2rem;
+    }
+    .landing p {
+        width: 90%;
+    }
+    .landing .warning h2 {
+        font-size: 1.8rem;
+        width: 100%;
+    }
+}

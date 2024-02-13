@@ -4,6 +4,7 @@ import logo from "/logo-YTS.svg";
 import { YifyAppContext } from '../context';
 import NavLink from './NavLink';
 import {FaSearch} from "react-icons/fa"
+import {GiHamburgerMenu} from "react-icons/gi"
 
 
 function NavBar() {
@@ -14,6 +15,10 @@ function NavBar() {
     <div className="top-nav">
         <div className="logo">
             <img src={logo} alt="logo" />
+            <div className="toggler">
+                <GiHamburgerMenu className='menu' />
+            </div>
+            
         </div>
             <div className="top-nav-group">
                 <form action="" method="get">

@@ -8,6 +8,7 @@
     justify-content: center;
     z-index: 10000;
     background-color: rgba(39, 38, 38, 0.805);
+    padding: 20px;
     padding-top: 72px;
     overflow: hidden;
     visibility: hidden;

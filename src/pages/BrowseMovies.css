@@ -14,17 +14,3 @@
     font-size: 1.3rem;
     margin-top: 24px;
 }
-
-.movies-list-container .movies {
-    width: 85%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.movies-list-container .movie-container {
-    width: 180px;
-}
-
-.movies-list-container .movie-container .movie-card {
-    height: 260px;
-}

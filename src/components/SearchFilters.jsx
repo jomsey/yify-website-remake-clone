@@ -44,29 +44,28 @@ export default function SearchFilters() {
 
         {
           title:"Language",
-          items:["All","English"],
+          items:["All","English","Portuguese","Korean","French"],
           ref:languageRef},
           
         {
           title:"Order By",
-          items:[],
+          items:["Title","Year"],
           ref:sortRef
         }
 ]
 
    const handleSubmit = (e)=>{
-     e.preventDefault()
-     setFilters({
-      quality:qualityRef.current.value,
-      genre:genreRef.current.value,
-      language:languageRef.current.value,
-      order:sortRef.current.value,
-      year:yearRef.current.value,
-      rate:ratingRef.current.value,
-      query:queryRef.current.value
+          e.preventDefault()
+          setFilters({
+          quality:qualityRef.current.value,
+          genre:genreRef.current.value,
+          language:languageRef.current.value,
+          order:sortRef.current.value,
+          year:yearRef.current.value,
+          rate:ratingRef.current.value,
+          query:queryRef.current.value
      })
-     
-      
+        
    }
 
    
